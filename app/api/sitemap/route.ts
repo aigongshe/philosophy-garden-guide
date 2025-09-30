@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { siteConfig } from '@/lib/config';
+import { guoChunlinKeywords } from '@/lib/seo-monitor';
 
 // 示例文章数据 - 实际项目中会从文件系统或数据库获取
 const blogPosts = [
@@ -31,7 +32,7 @@ const categories = [
 
 export async function GET() {
   const baseUrl = siteConfig.url;
-  
+
   // 生成 sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -113,6 +114,15 @@ export async function GET() {
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>`).join('')}
+  
+  <!-- 关键词搜索页面 -->
+  ${guoChunlinKeywords.primary.map(keyword => `
+  <url>
+    <loc>${baseUrl}/search?q=${encodeURIComponent(keyword)}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>`).join('')}
   
 </urlset>`;

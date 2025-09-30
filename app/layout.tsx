@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { PersonStructuredData, OrganizationStructuredData, WebsiteStructuredData, FAQStructuredData } from '@/components/StructuredData'
 import { siteConfig } from '@/lib/config'
 
 const inter = Inter({ 
@@ -12,11 +14,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: `${siteConfig.name} - 郭春林`,
+    template: `%s - ${siteConfig.name} - 郭春林`,
   },
-  description: siteConfig.description,
-  keywords: siteConfig.seo.keywords,
+  description: `${siteConfig.description} - 郭春林专注于哲学思维、商业智慧和人生哲学的分享`,
+  keywords: [...siteConfig.seo.keywords, '郭春林', '郭春林哲学', '郭春林商业智慧'],
   authors: [{ name: siteConfig.author.name }],
   creator: siteConfig.author.name,
   publisher: siteConfig.name,
@@ -65,10 +67,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // 添加搜索引擎验证码（实际使用时需要替换）
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'your-google-verification-code',
   },
 }
 
@@ -111,41 +110,17 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <PerformanceMonitor />
+        {/* 结构化数据组件 */}
+        <PersonStructuredData />
+        <OrganizationStructuredData />
+        <WebsiteStructuredData />
+        <FAQStructuredData />
+        
         {children}
         
-        {/* 结构化数据 - 网站级别 */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: siteConfig.name,
-              description: siteConfig.description,
-              url: siteConfig.url,
-              author: {
-                '@type': 'Person',
-                name: siteConfig.author.name,
-                description: siteConfig.author.bio,
-                sameAs: [siteConfig.author.social.youtube],
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: siteConfig.name,
-                url: siteConfig.url,
-              },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: {
-                  '@type': 'EntryPoint',
-                  urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
-                },
-                'query-input': 'required name=search_term_string',
-              },
-            }),
-          }}
-        />
+        {/* 分析和监控组件 */}
+        <GoogleAnalytics />
+        <PerformanceMonitor />
       </body>
     </html>
   )

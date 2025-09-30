@@ -9,9 +9,11 @@ export interface BlogPost {
   tags: string[];
   category: string;
   featured: boolean;
+  thumbnail: string;
   youtubeVideoId?: string;
   seoKeywords: string[];
   readingTime: number;
+  difficulty?: '入门' | '中级' | '高级';
 }
 
 export interface Category {
