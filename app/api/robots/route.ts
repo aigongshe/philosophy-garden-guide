@@ -9,6 +9,9 @@ Allow: /
 Allow: /posts/
 Allow: /categories/
 Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
 
 # 禁止访问的路径
 Disallow: /api/

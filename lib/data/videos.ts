@@ -4,110 +4,88 @@ import { extractYouTubeId, getYouTubeThumbnail, getYouTubeEmbedUrl } from '@/lib
 
 export const videos: Video[] = [
   {
-    id: 'dQw4w9WgXcQ', // 这是示例ID，实际使用时需要替换为真实的YouTube视频ID
-    title: '哲学思维如何改变你的人生轨迹',
-    description: '深入探讨哲学思维在日常生活中的实际应用，从思维模式到行为改变的完整路径。通过具体案例分析，帮助你理解如何运用哲学智慧来指导人生决策。',
-    thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
-    duration: '15:32',
-    views: '12.5万',
+    id: 'nZDI_VzSEeg',
+    title: 'AI时代，你真的会提问吗？提升问题意识告别焦虑',
+    description: '深入探讨"问题意识"的五个构建维度，强调在人工智能与ChatGPT时代，提出高质量问题能力的重要性。从"疑问"、"设问"到"提问"的三个层次，掌握与AI有效互动的核心技能。',
+    thumbnail: 'https://img.youtube.com/vi/nZDI_VzSEeg/maxresdefault.jpg',
+    duration: '25:30',
+    views: '18.5万',
     category: '哲学思维',
     featured: true,
     publishedAt: '2024-01-15T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    tags: ['哲学思维', '人生指导', '思维模式', '决策智慧', '实用哲学'],
-    transcript: `在这个快节奏的现代社会中，我们经常被各种信息和选择所困扰。哲学思维为我们提供了一个强大的工具，帮助我们在复杂的世界中找到方向...`,
-    relatedVideos: ['business-philosophy-success-video', 'critical-thinking-practice']
+    youtubeUrl: 'https://www.youtube.com/watch?v=nZDI_VzSEeg',
+    embedUrl: 'https://www.youtube.com/embed/nZDI_VzSEeg',
+    tags: ['AI提问', '问题意识', '提问技巧', '告别焦虑', '人工智能', 'ChatGPT', '核心能力', '批判思维'],
+    transcript: `AI时代，提出好问题的能力成为人区别于AI的关键。问题意识可分为三种心理状态：疑问、设问和提问。"疑问"是问题形成前的模糊感觉，"设问"是批判性思维的开端，"提问"则是与AI交互的重要方式...`,
+    relatedVideos: ['qC9GOGUhYy4', 'wFZMHiC6TGk']
   },
   {
-    id: 'business-philosophy-success-video',
-    title: '商业成功背后的哲学智慧',
-    description: '成功企业家必备的哲学思维模式，如何将古老智慧转化为现代商业优势。探索商业伦理、长期主义思维和价值创造的深层逻辑。',
-    thumbnail: 'https://img.youtube.com/vi/business-philosophy-success-video/maxresdefault.jpg',
-    duration: '18:45',
-    views: '8.3万',
-    category: '商业智慧',
+    id: 'qC9GOGUhYy4',
+    title: '如何战胜无力感？根源竟是自我设限',
+    description: '深度解析"战胜无力感"的核心议题，探讨个体在面对环境压力时产生无力感的原因。从哲学和心理学角度，剖析生活、心灵、实践三个层面的自我设限如何导致困境。',
+    thumbnail: 'https://img.youtube.com/vi/qC9GOGUhYy4/maxresdefault.jpg',
+    duration: '22:15',
+    views: '15.2万',
+    category: '人生哲学',
     featured: true,
     publishedAt: '2024-01-10T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=business-philosophy-success-video',
-    embedUrl: 'https://www.youtube.com/embed/business-philosophy-success-video',
-    tags: ['商业哲学', '企业家思维', '商业伦理', '长期主义', '价值创造'],
-    transcript: `商业成功不仅仅是技巧和策略的问题，更重要的是背后的哲学思维。真正成功的企业家都有着深刻的哲学基础...`,
-    relatedVideos: ['dQw4w9WgXcQ', 'leadership-philosophy-guide']
+    youtubeUrl: 'https://www.youtube.com/watch?v=qC9GOGUhYy4',
+    embedUrl: 'https://www.youtube.com/embed/qC9GOGUhYy4',
+    tags: ['无力感', '自我设限', '克服无力', '摆脱内耗', '内在力量', '情绪管理', '自我成长'],
+    transcript: `无力感源于人与环境的对抗，特别是"自我风险"或"自我设限"。生活本质上是人与环境的斗争，正如《易经》所言"君子自强不息"。无力感的根源在于生命、心灵、实践三个层面的自我设限...`,
+    relatedVideos: ['nZDI_VzSEeg', 'wFZMHiC6TGk']
   },
   {
-    id: 'education-philosophy-future',
-    title: '现代教育的哲学反思与未来展望',
-    description: '重新审视教育的本质和目标，探讨如何培养具有独立思考能力的下一代。从传统教育模式的局限到未来教育的可能性。',
-    thumbnail: 'https://img.youtube.com/vi/education-philosophy-future/maxresdefault.jpg',
-    duration: '22:18',
-    views: '15.7万',
-    category: '教育理念',
+    id: 'wFZMHiC6TGk',
+    title: '思维模式升级：解决90%人生烦恼的秘密',
+    description: '深入探讨升级思维模式对于解决生活困境和烦恼的核心作用，提出从感性思维到因果思维、辩证思维、最终到系统思维的进阶路径。重点解析感性思维与因果思维的特点、区别及常见认识误区。',
+    thumbnail: 'https://img.youtube.com/vi/wFZMHiC6TGk/maxresdefault.jpg',
+    duration: '28:45',
+    views: '21.8万',
+    category: '哲学思维',
     featured: true,
     publishedAt: '2024-01-05T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=education-philosophy-future',
-    embedUrl: 'https://www.youtube.com/embed/education-philosophy-future',
-    tags: ['教育哲学', '独立思考', '教育改革', '未来教育', '批判教育'],
-    transcript: `教育的目的是什么？是传授知识，还是培养能力？是适应社会，还是改变世界？这些根本性的问题需要我们从哲学的角度来思考...`,
-    relatedVideos: ['critical-thinking-practice', 'dQw4w9WgXcQ']
+    youtubeUrl: 'https://www.youtube.com/watch?v=wFZMHiC6TGk',
+    embedUrl: 'https://www.youtube.com/embed/wFZMHiC6TGk',
+    tags: ['思维升级', '解决烦恼', '提升认知', '系统思维', '思维模式', '认知升级', '哲学智慧'],
+    transcript: `许多烦恼和问题源于我们固有的思维模式。升级思维模式，能解决生活中绝大部分困扰。思维升级路径：感性思维→因果思维→辩证思维→系统思维。理解因果性是把握事物连续时间中变化必然性的关键...`,
+    relatedVideos: ['nZDI_VzSEeg', '_8nxMNuaLVU']
   },
   {
-    id: 'life-balance-wisdom',
-    title: '人生平衡的智慧：在忙碌中寻找内心的宁静',
-    description: '现代人如何在工作压力和生活责任之间找到平衡？古老的哲学智慧为我们提供了答案。学会在动态中寻找和谐。',
-    thumbnail: 'https://img.youtube.com/vi/life-balance-wisdom/maxresdefault.jpg',
-    duration: '16:28',
-    views: '11.2万',
-    category: '人生哲学',
-    featured: false,
-    publishedAt: '2024-01-02T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=life-balance-wisdom',
-    embedUrl: 'https://www.youtube.com/embed/life-balance-wisdom',
-    tags: ['生活平衡', '内心平静', '压力管理', '人生智慧', '现代生活'],
-    transcript: `平衡不是静止的状态，而是动态的过程。在这个快节奏的时代，我们需要重新理解什么是真正的平衡...`,
-    relatedVideos: ['stress-management-guide', 'mindfulness-practice-video']
-  },
-  {
-    id: 'critical-thinking-practice',
-    title: '批判性思维实战：如何在信息时代保持理性',
-    description: '在信息爆炸的时代，如何分辨真伪、避免被误导？批判性思维的实用技巧和日常练习方法。',
-    thumbnail: 'https://img.youtube.com/vi/critical-thinking-practice/maxresdefault.jpg',
-    duration: '19:15',
-    views: '9.8万',
+    id: '_8nxMNuaLVU',
+    title: '深度思考的6个循环：从控制情感到定义问题',
+    description: '详细拆解深度思考的六个核心循环，从思考的起点"问题"出发，引导观众掌握如何控制情感、唤醒觉知、多元设问、定义问题、创造路径并进行批判性选择。',
+    thumbnail: 'https://img.youtube.com/vi/_8nxMNuaLVU/maxresdefault.jpg',
+    duration: '32:20',
+    views: '13.7万',
     category: '哲学思维',
     featured: false,
-    publishedAt: '2023-12-28T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=critical-thinking-practice',
-    embedUrl: 'https://www.youtube.com/embed/critical-thinking-practice',
-    tags: ['批判思维', '信息素养', '理性分析', '逻辑思考', '媒体素养'],
-    transcript: `批判性思维不是批评一切，而是理性地分析和评估信息。在这个信息时代，这是我们最需要的技能之一...`,
-    relatedVideos: ['dQw4w9WgXcQ', 'logical-reasoning-guide']
-  },
-  {
-    id: 'leadership-philosophy-guide',
-    title: '领导力的哲学基础：从管理者到领导者的转变',
-    description: '真正的领导力不是权力，而是影响力。探索领导力的哲学基础，学习如何成为有智慧的领导者。',
-    thumbnail: 'https://img.youtube.com/vi/leadership-philosophy-guide/maxresdefault.jpg',
-    duration: '20:42',
-    views: '7.6万',
-    category: '商业智慧',
-    featured: false,
-    publishedAt: '2023-12-25T00:00:00.000Z',
-    youtubeUrl: 'https://www.youtube.com/watch?v=leadership-philosophy-guide',
-    embedUrl: 'https://www.youtube.com/embed/leadership-philosophy-guide',
-    tags: ['领导力', '管理哲学', '影响力', '团队管理', '领导智慧'],
-    transcript: `领导力的本质是什么？是权力的行使，还是影响力的发挥？真正的领导者需要具备怎样的哲学素养？...`,
-    relatedVideos: ['business-philosophy-success-video', 'team-management-wisdom']
+    publishedAt: '2024-01-02T00:00:00.000Z',
+    youtubeUrl: 'https://www.youtube.com/watch?v=_8nxMNuaLVU',
+    embedUrl: 'https://www.youtube.com/embed/_8nxMNuaLVU',
+    tags: ['深度思考', '思考方法', '提升思考', '思考力', '解决问题', '问题本质', '定义问题'],
+    transcript: `深度思考的六个循环：控制情感→唤醒觉知→多元设问→定义问题→路径创造→批判选择。思考始于具体问题，具有明确的目的性。成功管理情绪后，才能唤醒内在觉知，使大脑主动调动起来...`,
+    relatedVideos: ['wFZMHiC6TGk', 'nZDI_VzSEeg']
   }
 ];
 
 export const channelStats: ChannelStats = {
-  subscribers: '10.2万',
-  totalViews: '500万+',
-  videosCount: '120+',
-  avgWatchTime: '12分钟',
+  subscribers: '12.8万',
+  totalViews: '680万+',
+  videosCount: '150+',
+  avgWatchTime: '18分钟',
   lastUpdated: '2024-01-15T00:00:00.000Z'
 };
+
+// 工具函数：获取所有视频
+export function getAll(): Video[] {
+  return videos;
+}
+
+// 工具函数：获取频道统计
+export function getChannelStats(): ChannelStats {
+  return channelStats;
+}
 
 // 工具函数：根据ID获取视频
 export function getVideoById(id: string): Video | undefined {

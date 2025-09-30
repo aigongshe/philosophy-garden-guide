@@ -1,128 +1,13 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { remark } from 'remark';
+import html from 'remark-html';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import RelatedPosts from '@/components/RelatedPosts';
 import { siteConfig } from '@/lib/config';
-
-// 示例文章数据 - 实际项目中会从文件系统或CMS获取
-const blogPosts = {
-  'philosophy-thinking-guide': {
-    title: '哲学思维：现代人的智慧指南',
-    description: '在快节奏的现代生活中，哲学思维如何帮助我们找到内心的平静与人生的方向？',
-    content: `
-# 哲学思维：现代人的智慧指南
-
-在这个信息爆炸、节奏飞快的时代，我们每天都在面对无数的选择和挑战。工作压力、人际关系、未来规划...这些问题常常让我们感到迷茫和焦虑。然而，古老的哲学智慧却能为现代人提供一盏明灯，指引我们找到内心的平静与人生的方向。
-
-## 什么是哲学思维？
-
-哲学思维不是高深莫测的学术概念，而是一种看待世界和思考问题的方式。它包含以下几个核心要素：
-
-### 1. 批判性思考
-不盲从权威，不轻信表象，而是通过理性分析来判断事物的本质。
-
-### 2. 系统性思维
-将复杂的问题分解，从多个角度和层面来理解和解决问题。
-
-### 3. 价值观反思
-经常审视自己的价值观和人生目标，确保行动与内心的真实想法一致。
-
-## 哲学思维在现代生活中的应用
-
-### 职场决策
-当面临职业选择时，哲学思维帮助我们：
-- 明确自己的核心价值观
-- 分析不同选择的长远影响
-- 平衡理想与现实的关系
-
-### 人际关系
-在处理复杂的人际关系时：
-- 理解他人行为背后的动机
-- 保持同理心和包容心
-- 建立基于尊重和理解的关系
-
-### 个人成长
-在自我提升的道路上：
-- 认识自己的优势和局限
-- 设定有意义的人生目标
-- 培养内在的平静和智慧
-
-## 如何培养哲学思维？
-
-### 1. 多读经典
-阅读古今中外的哲学经典，汲取前人的智慧。
-
-### 2. 勤于思考
-对日常生活中的现象保持好奇心，经常问"为什么"。
-
-### 3. 实践反思
-定期反思自己的行为和决策，从中学习和成长。
-
-### 4. 开放对话
-与不同观点的人交流，拓宽自己的思维边界。
-
-## 结语
-
-哲学思维不是一蹴而就的技能，而是需要终身修炼的智慧。在这个复杂多变的世界里，让我们用哲学的眼光看待生活，用智慧的心态面对挑战，在思考中找到属于自己的人生答案。
-
-记住，真正的智慧不在于拥有所有答案，而在于提出正确的问题。让哲学思维成为你人生路上的指南针，引领你走向更加充实和有意义的生活。
-    `,
-    category: '哲学思维',
-    author: '郭春林',
-    publishedAt: '2024-01-15',
-    readingTime: 8,
-    tags: ['哲学', '思维', '理性', '现代生活'],
-    youtubeVideoId: 'dQw4w9WgXcQ', // 示例视频ID
-  },
-  'business-philosophy-success': {
-    title: '商业哲学：成功企业家的思维模式',
-    description: '探索成功企业家背后的哲学思维，如何将智慧转化为商业成功的动力。',
-    content: `
-# 商业哲学：成功企业家的思维模式
-
-成功的企业家往往不仅仅是商业技巧的高手，更是具有深刻哲学思维的智者。他们能够在复杂的商业环境中保持清醒的头脑，做出正确的战略决策。今天，让我们探索成功企业家背后的哲学思维模式。
-
-## 企业家的哲学基础
-
-### 1. 长远视野
-真正的企业家不会被短期利益所迷惑，而是具有长远的战略眼光。
-
-### 2. 价值创造
-优秀的企业家明白，真正的成功来自于为社会创造价值，而不仅仅是获取利润。
-
-### 3. 持续学习
-在快速变化的商业环境中，保持学习的心态是企业家成功的关键。
-
-## 商业决策中的哲学智慧
-
-### 风险与机遇的平衡
-哲学思维帮助企业家：
-- 理性评估风险和机遇
-- 在不确定性中做出决策
-- 保持冷静和客观的判断
-
-### 团队管理的艺术
-- 理解人性的复杂性
-- 激发团队的内在动力
-- 建立基于信任的企业文化
-
-## 实践案例分析
-
-让我们通过一些成功企业家的案例，来理解哲学思维在商业实践中的应用...
-
-[文章内容继续...]
-    `,
-    category: '商业智慧',
-    author: '郭春林',
-    publishedAt: '2024-01-10',
-    readingTime: 12,
-    tags: ['商业', '企业家', '成功', '哲学'],
-    youtubeVideoId: 'dQw4w9WgXcQ',
-  },
-  // 可以添加更多文章...
-};
+import { getPostBySlug, getRelatedPosts } from '@/lib/data/posts';
 
 interface PageProps {
   params: {
@@ -131,7 +16,7 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+  const post = getPostBySlug(params.slug);
   
   if (!post) {
     return {
@@ -140,9 +25,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${post.title} - ${siteConfig.name}`,
-    description: post.description,
-    keywords: [...post.tags, '郭春林', siteConfig.name],
+    title: post.seoTitle || `${post.title} - ${siteConfig.name}`,
+    description: post.seoDescription || post.description,
+    keywords: post.seoKeywords || [...post.tags, '郭春林', siteConfig.name],
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
@@ -160,12 +45,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function PostPage({ params }: PageProps) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export default async function PostPage({ params }: PageProps) {
+  const post = getPostBySlug(params.slug);
 
   if (!post) {
     notFound();
   }
+
+  // 将Markdown转换为HTML
+  const processedContent = await remark()
+    .use(html)
+    .process(post.content);
+  const contentHtml = processedContent.toString();
+
+  // 获取相关文章
+  const relatedPosts = getRelatedPosts(post, 3);
 
   return (
     <div className="min-h-screen bg-white">
@@ -233,22 +127,22 @@ export default function PostPage({ params }: PageProps) {
         </header>
 
         {/* Article Content */}
-        <article className="prose prose-lg max-w-none mb-12">
-          <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }} />
+        <article className="prose prose-lg prose-gray max-w-none mb-12 
+          prose-headings:text-gray-900 prose-headings:font-bold
+          prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12
+          prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-10 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-2
+          prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
+          prose-h4:text-xl prose-h4:mb-3 prose-h4:mt-6
+          prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+          prose-strong:text-gray-900 prose-strong:font-semibold
+          prose-ul:my-6 prose-ol:my-6
+          prose-li:text-gray-700 prose-li:mb-2
+          prose-blockquote:border-l-4 prose-blockquote:border-primary-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-600
+          prose-code:text-primary-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+          prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
+        ">
+          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </article>
-
-        {/* YouTube Video */}
-        {post.youtubeVideoId && (
-          <section className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              相关视频内容
-            </h3>
-            <YouTubeEmbed
-              videoId={post.youtubeVideoId}
-              title={`${post.title} - 视频讲解`}
-            />
-          </section>
-        )}
 
         {/* YouTube Channel CTA */}
         <section className="mb-12">
@@ -260,7 +154,7 @@ export default function PostPage({ params }: PageProps) {
               订阅郭春林的YouTube频道，观看更多哲学思维和人生智慧的视频内容
             </p>
             <a
-              href={siteConfig.author.social.youtube}
+              href="https://www.youtube.com/playlist?list=PL50eMVAu4GRYKbYu3dQKGBM8O6VYYwUdT"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-200"
@@ -274,7 +168,53 @@ export default function PostPage({ params }: PageProps) {
         </section>
 
         {/* Related Posts */}
-        <RelatedPosts currentSlug={params.slug} category={post.category} />
+        {relatedPosts.length > 0 && (
+          <section className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              相关文章推荐
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedPosts.map((relatedPost) => (
+                <article key={relatedPost.slug} className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-1 rounded">
+                        {relatedPost.category}
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        {relatedPost.readingTime} 分钟
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                      <a href={`/posts/${relatedPost.slug}`} className="hover:text-primary-600 transition-colors">
+                        {relatedPost.title}
+                      </a>
+                    </h4>
+                    <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                      {relatedPost.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-xs text-gray-500">
+                        <time>
+                          {new Date(relatedPost.publishedAt).toLocaleDateString('zh-CN', {
+                            month: 'short',
+                            day: 'numeric',
+                          })}
+                        </time>
+                      </div>
+                      <a 
+                        href={`/posts/${relatedPost.slug}`}
+                        className="text-primary-600 hover:text-primary-700 text-sm font-medium"
+                      >
+                        阅读更多 →
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       <Footer />

@@ -1,34 +1,67 @@
 {
   "name": "philosophy-garden-guide",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "跟随郭春林探索人生智慧，在哲学思维的花园中寻找商业成功与内心平静的平衡之道",
+  "author": {
+    "name": "郭春林 (Guo Chunlin)",
+    "email": "contact@philosophy-garden.com",
+    "url": "https://philosophy-garden-guide.vercel.app"
+  },
+  "homepage": "https://philosophy-garden-guide.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/philosophy-garden-guide.git"
+  },
+  "keywords": [
+    "philosophy",
+    "wisdom",
+    "business",
+    "life",
+    "thinking",
+    "郭春林",
+    "哲学思维",
+    "商业智慧",
+    "人生哲学"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "analyze": "cross-env ANALYZE=true next build",
+    "export": "next export"
   },
   "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "@next/mdx": "^14.0.4",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
-    "next-seo": "^6.4.0",
+    "@next/mdx": "^14.0.4",
     "gray-matter": "^4.0.3",
+    "next": "14.0.4",
+    "next-seo": "^6.4.0",
+    "react": "^18",
+    "react-dom": "^18",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "typescript": "^5"
   }
 }

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { Categories as CategoriesData } from '@/lib/data';
+import { getPostStats } from '@/lib/data/posts';
 
 const difficultyColors = {
   '入门': 'bg-green-100 text-green-800',
@@ -17,7 +17,53 @@ export default function Categories() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // 使用统一数据源
-  const allCategories = CategoriesData.updatePostCounts();
+  const stats = getPostStats();
+  
+  // 基于实际文章数据生成分类
+  const allCategories = [
+    {
+      id: 'philosophy-thinking',
+      name: '哲学思维',
+      slug: 'philosophy-thinking',
+      description: '在信息爆炸的时代，哲学思维是你的"心智防火墙"',
+      icon: '🧠',
+      color: 'from-blue-500 to-blue-700',
+      hoverColor: 'group-hover:from-blue-600 group-hover:to-blue-800',
+      count: stats.byCategory['philosophy-thinking'] || 0,
+      difficulty: '中级',
+      featured: true,
+      popularity: 95,
+      keywords: ['批判性思维', '深度思考', '认知升级', '心智模型']
+    },
+    {
+      id: 'business-wisdom',
+      name: '商业智慧',
+      slug: 'business-wisdom',
+      description: '真正的商业成功不在于战术，而在于哲学',
+      icon: '💼',
+      color: 'from-green-500 to-green-700',
+      hoverColor: 'group-hover:from-green-600 group-hover:to-green-800',
+      count: stats.byCategory['business-wisdom'] || 0,
+      difficulty: '进阶',
+      featured: true,
+      popularity: 88,
+      keywords: ['企业家思维', '商业哲学', '创新思维', '成功法则']
+    },
+    {
+      id: 'life-philosophy',
+      name: '人生哲学',
+      slug: 'life-philosophy',
+      description: '学会驾驭内心的"三驾马车"，成为人生的智慧车夫',
+      icon: '🌟',
+      color: 'from-purple-500 to-purple-700',
+      hoverColor: 'group-hover:from-purple-600 group-hover:to-purple-800',
+      count: stats.byCategory['life-philosophy'] || 0,
+      difficulty: '入门',
+      featured: true,
+      popularity: 92,
+      keywords: ['人生平衡', '内心和谐', '生活智慧', '存在思考']
+    }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -72,8 +118,8 @@ export default function Categories() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-            每个分类都是一扇通往智慧的大门，按主题探索不同领域的哲学思考，
-            <span className="block mt-2 text-primary-700 font-semibold">找到最适合你当前需求的智慧内容</span>
+            每个分类都是一扇通往智慧的大门，从哲学思辨到商业智慧，从人生感悟到成长方法，
+            <span className="block mt-2 text-primary-700 font-semibold">在这里找到解决人生困惑的深度思考和实用智慧</span>
           </p>
 
           {/* Stats Overview */}
@@ -250,8 +296,8 @@ export default function Categories() {
                 开启你的智慧之旅
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                我们持续更新内容，涵盖更多哲学思维和人生智慧的主题。
-                <span className="block mt-2 text-primary-700 font-semibold">每个分类都有独特的价值，建议你全面探索</span>
+                基于郭春林老师多年的哲学思考和实践经验，我们将复杂的人生智慧转化为易懂的实用指南。
+                <span className="block mt-2 text-primary-700 font-semibold">每个分类都蕴含着改变人生的深刻洞察，值得你深入探索</span>
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
