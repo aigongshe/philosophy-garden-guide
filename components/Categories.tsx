@@ -312,7 +312,7 @@ export default function Categories() {
                 </Link>
                 
                 <a
-                  href="mailto:contact@philosophy-garden.com"
+                  href="mailto:contact@guochunlin.com"
                   className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 hover:border-primary-300 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 flex items-center"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -57,7 +57,7 @@ export const defaultSEO: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'your-google-verification-code-here',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
   },

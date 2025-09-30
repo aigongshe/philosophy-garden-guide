@@ -54,7 +54,7 @@ cp .env.example .env.local
 # .env.local 文件内容
 
 # 网站基础配置
-NEXT_PUBLIC_SITE_URL=https://philosophy-garden-guide.vercel.app
+NEXT_PUBLIC_SITE_URL=https://www.guochunlin.com
 NEXT_PUBLIC_SITE_NAME=哲学的花园导游
 
 # Google Analytics 4 (必需 - 需要真实的GA4 ID)
@@ -64,7 +64,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-verification-code
 
 # SEO监控配置
-NEXT_PUBLIC_SEARCH_CONSOLE_PROPERTY=https://philosophy-garden-guide.vercel.app
+NEXT_PUBLIC_SEARCH_CONSOLE_PROPERTY=https://www.guochunlin.com
 NEXT_PUBLIC_ENABLE_SEO_MONITORING=true
 
 # 性能监控
@@ -72,7 +72,7 @@ NEXT_PUBLIC_VERCEL_ANALYTICS=true
 
 # 作者信息
 NEXT_PUBLIC_AUTHOR_NAME=郭春林
-NEXT_PUBLIC_AUTHOR_EMAIL=contact@philosophy-garden.com
+NEXT_PUBLIC_AUTHOR_EMAIL=contact@guochunlin.com
 NEXT_PUBLIC_YOUTUBE_CHANNEL=https://www.youtube.com/@guochunlinthink
 
 
@@ -171,13 +171,13 @@ npm run start
 # 必需的生产环境变量
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-YOUR-ACTUAL-GA4-ID
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code
-NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+NEXT_PUBLIC_SITE_URL=https://www.guochunlin.com
 NEXT_PUBLIC_ENABLE_SEO_MONITORING=true
 NEXT_PUBLIC_VERCEL_ANALYTICS=true
 
 # 作者信息
 NEXT_PUBLIC_AUTHOR_NAME=郭春林
-NEXT_PUBLIC_AUTHOR_EMAIL=contact@philosophy-garden.com
+NEXT_PUBLIC_AUTHOR_EMAIL=contact@guochunlin.com
 NEXT_PUBLIC_YOUTUBE_CHANNEL=https://www.youtube.com/@guochunlinthink
 步骤3：部署执行
 # 使用Vercel CLI部署

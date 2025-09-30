@@ -386,9 +386,9 @@ export class SEOMonitor {
 export const searchConsoleConfig = {
   // 网站验证文件内容
   verificationMeta: {
-    name: 'google-site-verification',
-    content: 'your-google-verification-code' // 需要替换为实际的验证码
-  },
+      name: 'google-site-verification',
+      content: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'your-google-verification-code-here'
+    },
   
   // 提交sitemap的URL
   sitemapUrls: [

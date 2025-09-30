@@ -91,7 +91,7 @@
 2.  **创建GitHub仓库**
     ```bash
     # 在GitHub上创建新仓库：philosophy-garden-guide
-    git remote add origin https://github.com/[username]/philosophy-garden-guide.git
+    git remote add origin https://github.com/aigongshe/philosophy-garden-guide.git
     git branch -M main
     git push -u origin main
     ```
@@ -118,7 +118,7 @@
 ### 环境变量配置
 ```ini
 # 基础配置
-NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+NEXT_PUBLIC_SITE_URL=https://www.guochunlin.com
 NEXT_PUBLIC_SITE_NAME=哲学的花园导游
 
 # 分析配置（可选）

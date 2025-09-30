@@ -29,5 +29,5 @@
 
 ## 📞 支持
 如有问题，请通过以下方式联系我们：
-- 📧 邮箱: contact@philosophy-garden.com
-- 🐛 Issues: [GitHub Issues](https://github.com/username/philosophy-garden-guide/issues)
+- 📧 邮箱: contact@guochunlin.com
+- 🐛 Issues: [GitHub Issues](https://github.com/aigongshe/philosophy-garden-guide/issues)

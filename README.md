@@ -4,7 +4,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/username/philosophy-garden-guide)
 
-[![CI/CD](https://github.com/username/philosophy-garden-guide/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/username/philosophy-garden-guide/actions)
+[![CI/CD](https://github.com/aigongshe/philosophy-garden-guide/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/aigongshe/philosophy-garden-guide/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
@@ -13,7 +13,7 @@
 
 **跟随郭春林探索人生智慧，在哲学思维的花园中寻找商业成功与内心平静的平衡之道**
 
-[🌐 在线访问](https://philosophy-garden-guide.vercel.app) • [📚 文档](./docs) • [🐛 报告问题](https://github.com/username/philosophy-garden-guide/issues) • [💡 功能建议](https://github.com/username/philosophy-garden-guide/issues/new?template=feature_request.md)
+[🌐 在线访问](https://www.guochunlin.com) • [📚 文档](./docs) • [🐛 报告问题](https://github.com/aigongshe/philosophy-garden-guide/issues) • [💡 功能建议](https://github.com/aigongshe/philosophy-garden-guide/issues/new?template=feature_request.md)
 
 </div>
 
@@ -48,7 +48,7 @@
 
 | 环境 | 链接 | 状态 |
 |------|------|------|
-| 🚀 **生产环境** | [philosophy-garden-guide.vercel.app](https://philosophy-garden-guide.vercel.app) | [![Website](https://img.shields.io/website?url=https%3A%2F%2Fphilosophy-garden-guide.vercel.app)](https://philosophy-garden-guide.vercel.app) |
+| 🚀 **生产环境** | [www.guochunlin.com](https://www.guochunlin.com) | [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.guochunlin.com)](https://www.guochunlin.com) |
 | 🧪 **开发预览** | [philosophy-garden-guide-dev.vercel.app](https://philosophy-garden-guide-dev.vercel.app) | [![Website](https://img.shields.io/website?url=https%3A%2F%2Fphilosophy-garden-guide-dev.vercel.app)](https://philosophy-garden-guide-dev.vercel.app) |
 
 ## 🌟 项目概述
@@ -118,7 +118,7 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/username/philosophy-garden-guide.git
+git clone https://github.com/aigongshe/philosophy-garden-guide.git
 cd philosophy-garden-guide
 
 # 2. 安装依赖
@@ -279,8 +279,8 @@ git push origin feature/amazing-feature
 
 感谢所有贡献者的付出！
 
-<a href="https://github.com/username/philosophy-garden-guide/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=username/philosophy-garden-guide" />
+<a href="https://github.com/aigongshe/philosophy-garden-guide/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=aigongshe/philosophy-garden-guide" />
 </a>
 
 ## 📄 许可证
@@ -297,8 +297,8 @@ git push origin feature/amazing-feature
 **哲学思维的践行者 • 商业智慧的分享者**
 
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@guochunlinthink)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@philosophy-garden.com)
-[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://philosophy-garden-guide.vercel.app)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@guochunlin.com)
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.guochunlin.com)
 
 </div>
 
@@ -310,9 +310,9 @@ git push origin feature/amazing-feature
 
 ### 🤔 需要帮助？
 - 📖 [查看文档](./docs)
-- 🐛 [报告Bug](https://github.com/username/philosophy-garden-guide/issues/new?template=bug_report.md)
-- 💡 [功能建议](https://github.com/username/philosophy-garden-guide/issues/new?template=feature_request.md)
-- 💬 [讨论交流](https://github.com/username/philosophy-garden-guide/discussions)
+- 🐛 [报告Bug](https://github.com/aigongshe/philosophy-garden-guide/issues/new?template=bug_report.md)
+- 💡 [功能建议](https://github.com/aigongshe/philosophy-garden-guide/issues/new?template=feature_request.md)
+- 💬 [讨论交流](https://github.com/aigongshe/philosophy-garden-guide/discussions)
 
 ### 📊 项目统计
 
@@ -338,9 +338,9 @@ git push origin feature/amazing-feature
 
 ### 🌟 **让我们一起用哲学的智慧照亮人生的道路！**
 
-[![Star this repo](https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=for-the-badge)](https://github.com/username/philosophy-garden-guide)
-[![Follow on GitHub](https://img.shields.io/badge/👥-Follow%20on%20GitHub-blue?style=for-the-badge)](https://github.com/username)
+[![Star this repo](https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=for-the-badge)](https://github.com/aigongshe/philosophy-garden-guide)
+[![Follow on GitHub](https://img.shields.io/badge/👥-Follow%20on%20GitHub-blue?style=for-the-badge)](https://github.com/aigongshe)
 
-**Made with ❤️ by [郭春林](https://github.com/username) • © 2024 哲学的花园导游**
+**Made with ❤️ by [郭春林](https://github.com/aigongshe) • © 2024 哲学的花园导游**
 
 </div>

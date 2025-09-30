@@ -9,7 +9,7 @@ const https = require('https');
 const http = require('http');
 
 const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://philosophy-garden-guide.vercel.app'
+  ? 'https://www.guochunlin.com'
   : 'http://localhost:3000';
 
 // 需要检查的页面列表

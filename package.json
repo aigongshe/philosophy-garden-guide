@@ -5,13 +5,13 @@
   "description": "跟随郭春林探索人生智慧，在哲学思维的花园中寻找商业成功与内心平静的平衡之道",
   "author": {
     "name": "郭春林 (Guo Chunlin)",
-    "email": "contact@philosophy-garden.com",
-    "url": "https://philosophy-garden-guide.vercel.app"
+    "email": "contact@guochunlin.com",
+    "url": "https://www.guochunlin.com"
   },
-  "homepage": "https://philosophy-garden-guide.vercel.app",
+  "homepage": "https://www.guochunlin.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/philosophy-garden-guide.git"
+    "url": "https://github.com/aigongshe/philosophy-garden-guide.git"
   },
   "keywords": [
     "philosophy",
