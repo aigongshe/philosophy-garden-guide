@@ -1,0 +1,20 @@
+{
+  "processing_time": "2025-10-03T14:14:27.697947",
+  "model_used": "gemini-2.0-flash-exp",
+  "video_directory": "orignal/郭春林哲学智慧",
+  "subtitle_directory": "orignal/orinal_txt_md",
+  "output_directory": "tools",
+  "statistics": {
+    "total_videos_found": 441,
+    "total_subtitles_found": 439,
+    "matched_pairs": 439,
+    "processed": 189,
+    "skipped": 250,
+    "failed": 0,
+    "api_calls": 378
+  },
+  "results": {
+    "chinese_entries": 439,
+    "english_entries": 439
+  }
+}
